@@ -4,13 +4,13 @@ var array1 = [ "cat", "dog", "fish" ],
 function animalMatch(arr1, arr2) {
   var animalObject = {}
   for (var i =0; i < arr1.length; i++) {
-    animalObject[arr1[i]] = 1
+    animalObject[arr1[i]] = arr2[i]
   }
-  console.log(animalObject);
+  return(animalObject);
 }
 
 
-animalMatch(array1, array2);
+console.log(animalMatch(array1, array2));
     //-> animals = {
           //     cat: "lion",
           //     dog: "pointer",
