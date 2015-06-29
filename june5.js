@@ -2,8 +2,7 @@
 
 function reverser(string) {
   var newArr = string.split('')
-  console.log(newArr);
-  return newArr.reverse().toString()
+  return  newArr.reverse().join('')
 
 }
 console.log(reverser('code'));
