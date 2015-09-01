@@ -5,12 +5,15 @@
 // 2. use (probably something other than .every()).every() to compare values of array1 and array2
 // 3. return true or false
 
-var compare = function (string1, string2) {
-  var arr1 = string1.split("")
-  var arr2 = string2.split("")
-  for (i=0; i>arr1.length; i++)
+
+var perm = function (string1, string2) {
+  var str1 = string1.split("").sort().join("")
+  var str2 = string2.split("").sort().join("")
+  return str1 === str2
 }
-console.log(compare("Kim", "Catherine"));
+
+console.log(perm("Shannon", "Kim"));
+
 
 // if (arr1 == array2) {
 //   return true
