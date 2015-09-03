@@ -1,10 +1,16 @@
-// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
-// The sum of these multiples is 23.
-//
-// Find the sum of all the multiples of 3 or 5 below 1000.
-//
-// Taken from the first problem in Project Euler.
+// Write a function that determines if any two digit number is a Lychrel Number.
+// Swap the position of each number (so 41 would become 14)
+// Add it to the original number (41 + 14)
+// Check if it's a palindrome (in this case 55 is one, so we'd stop)
+// If not, repeat steps 1 - 3 until it is.
 
-var sum
-
-forEach number less than 1,000 that is divisible by 3 or 5, add it to an accumulator 
+var findLych = function (num) {
+  num2 = parseInt((num + '').split('').reverse().join(''))
+  checkNum = num + num2
+  if (checkNum === palindrome){
+    return checkNum
+  } else {
+    repeat findLync with checkNum
+  }
+}
+console.log(findLych(31));
