@@ -10,17 +10,21 @@
 // After creating the base object, create a specific animal class of your choice
 // that extends the base animal.
 
-var Animal = function(type, hunger, tired, foods){
+var Animal = function(type, foods){
   this.type = type;
   this.hunger = true;
   this.tired = true;
-  this.foods = [];
+  this.foods = foods;
 };
 
-Animal.prototype.eat = function (foods) {
-  this.foods.push(foods)
-  this.hunger = false
+uch
+//refactor with filter?
+Animal.prototype.eat = function(food) {
+    if (this.foods.indexOf(food) >= 0) {
+        this.hunger = false;
+    }
 }
+
 
 Animal.prototype.sleep = function(hours){
   if(hours >= 8){
@@ -28,6 +32,6 @@ Animal.prototype.sleep = function(hours){
   }
 }
 
-var horse = new Animal('Arab', true, true );
-horse.eat("Grass", "Hay", "Carrots")
+var horse = new Animal('Arab', ["Grass", "Hay", "Carrots"]);
+horse.eat("Grass")
 console.log(horse);
