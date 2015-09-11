@@ -1,7 +1,11 @@
-var newObj = {
-  id: 123,
-  name: "Lucy",
+
+
+function countWords (arr) {
+  return arr.reduce(function(prev, curr) {
+    prev[curr] != undefined ? prev[curr] ++ : prev[curr] = 1
+    return prev
+  }, {})
 }
 
-newObj[comment] = "foo"
-newObj.comment = "foo"
+
+console.log(countWords(['dog', 'cat', 'dog', 'dog', 'bird']));
